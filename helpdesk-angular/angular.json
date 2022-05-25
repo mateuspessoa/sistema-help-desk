@@ -3,12 +3,12 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "helpdesk": {
+    "helpdesk-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "inlineTemplate": true,
-          "inlineStyle": true,
+          "inlineTemplate": false,
+          "inlineStyle": false,
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -43,7 +43,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/helpdesk",
+            "outputPath": "dist/helpdesk-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -94,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "helpdesk:build:production"
+              "browserTarget": "helpdesk-angular:build:production"
             },
             "development": {
-              "browserTarget": "helpdesk:build:development"
+              "browserTarget": "helpdesk-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,11 +105,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "helpdesk:build"
+            "browserTarget": "helpdesk-angular:build"
           }
         }
       }
     }
   },
-  "defaultProject": "helpdesk"
+  "defaultProject": "helpdesk-angular"
 }
