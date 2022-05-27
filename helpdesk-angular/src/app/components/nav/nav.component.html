@@ -1,38 +1,57 @@
-<mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
-        <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">home</i>
-                HOME
-            </a>
-
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">account_circle</i>
-                Técnicos
-            </a>
-
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">person</i>
-                Clientes
-            </a>
-
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">code</i>
-                GitHub
-            </a>
-
-            <a mat-list-item routerLink="/">
-                <i class="material-icons">logout</i>
-                Logout
-            </a>
-        </mat-nav-list>
-    </mat-drawer>
-  
-    <div class="sidenav-content">
-      <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
-        <mat-icon>menu</mat-icon>
-      </button>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">HelpDesk</div>
+        <i class='bx bx-menu' id="btn" ></i>
     </div>
-  
-  </mat-drawer-container>
-  
+    <ul class="nav-list">
+      
+      <li>
+        <a href="#">
+            <i class='bx bx-home'></i>
+          <span class="links_name">Home</span>
+        </a>
+         <span class="tooltip">Home</span>
+      </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Clientes</span>
+       </a>
+       <span class="tooltip">Clientes</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bx-id-card'></i>
+         <span class="links_name">Técnicos</span>
+       </a>
+       <span class="tooltip">Técnicos</span>
+     </li>
+     <li>
+       <a href="#">
+        <i class='bx bxl-github'></i>
+         <span class="links_name">GitHub</span>
+       </a>
+       <span class="tooltip">GitHub</span>
+     </li>
+     
+     <li class="profile">
+         <div class="profile-details">
+           <!--<img src="profile.jpg" alt="profileImg">-->
+           <div class="name_job">
+             <div class="name">Usuário X</div>
+             <div class="job">Administrador</div>
+           </div>
+         </div>
+         <a href="#">
+             <i class='bx bx-log-out' id="log_out" ></i>
+        </a>
+     </li>
+    </ul>
+  </div>
+
+  <!--
+  <section class="home-section">
+      <div class="text">Dashboard</div>
+  </section>
+  -->
